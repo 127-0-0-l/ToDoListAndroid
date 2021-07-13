@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ToDoList.MainPage">
+
+    <StackLayout x:Name="stlMain">
+
+        <StackLayout VerticalOptions="Start">
+            <Frame x:Name="frmHeader" Padding="10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="50"/>
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Column="0"
+                        VerticalOptions="Center"
+                        x:Name="lblHeader"
+                        Text="ToDo List"
+                        FontAttributes="Bold"
+                        FontSize="22"
+                        HorizontalTextAlignment="Center"/>
+                    <ImageButton
+                        x:Name="ibtnThemeSwitcher"
+                        Clicked="ibtnThemeSwitcher_Clicked"
+                        Source="drawable/ThemeIcon.png"
+                        BackgroundColor="#ffaa71"
+                        HeightRequest="50"
+                        Grid.Column="1"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill"/>
+                </Grid>
+            </Frame>
+
+            <ScrollView>
+                <Grid x:Name="grdList">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="60"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                </Grid>
+            </ScrollView>
+        </StackLayout>
+
+        <StackLayout VerticalOptions="CenterAndExpand">
+            
+        </StackLayout>
+
+        <StackLayout VerticalOptions="End">
+            <Button
+                x:Name="btnNewTask"
+                Clicked="btnNewTask_Clicked"
+                Text="New task"
+                FontSize="14"
+                TextTransform="Default"
+                Padding="15"
+                CornerRadius="20"
+                Margin="5"/>
+        </StackLayout>
+        
+    </StackLayout>
+
+</ContentPage>
